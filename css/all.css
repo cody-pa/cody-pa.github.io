@@ -1,0 +1,64 @@
+/*
+@font-face
+{
+    font-family: "Merriweather";
+    src: url("./fonts/Merriweather-Regular.otf") format("opentype");
+}
+*/
+body, div, html, header, footer, main
+{
+    box-sizing: border-box;
+    font-family: 'CousineRegular';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 1em;
+    color: white;
+}
+
+h1, h2, h3, h4, nav li
+{
+    font-family: 'XoloniumRegular';
+    font-weight: 'bold';
+}
+
+a
+{
+    color: #81A4CD;
+    text-decoration: none;
+}
+
+a:hover
+{
+    text-decoration: underline;
+}
+
+h1 a 
+{
+    color: white;
+    text-decoration: none;
+}
+
+.lined
+{
+    width:100%;
+    border-bottom: 0.15em solid white;
+    display: inline-block;
+}
+
+.image-container
+{
+    max-width: 100%;
+    padding: 1em;
+    display:inline-block;
+}
+
+.image-container img
+{
+    max-width: calc(100% - 2em);
+}
+
+.image-container p
+{
+    color: darkgray;
+    text-align: center;
+}
