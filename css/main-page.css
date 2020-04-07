@@ -40,7 +40,6 @@ nav
     justify-content: center;
     margin: 0;
     border: none;
-    border-right: 1px solid #CECECE;
     list-style: none;
 }
 nav li
@@ -48,14 +47,16 @@ nav li
     padding: 1em;
 }
 
-#main-wrapper
-{
+#main-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     flex-grow: 1;
     align-items: center;
     max-width: 100%;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) );
+    border-radius: 1em;
+    margin: 1em;
 }
 #main
 {
