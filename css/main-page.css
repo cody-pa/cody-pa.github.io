@@ -1,12 +1,15 @@
 /* This CSS will only appear in the main page. */
 
-html
-{
+html {
     display: flex;
     flex-direction: column;
     min-height: 100%;
     padding: 0;
     margin: 0;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../media/sky-space-dark-galaxy.jpg");
+    background-size: cover;
+    background-position: center;
+    background-color: black;
 }
 body
 {
@@ -81,18 +84,4 @@ footer
     width: 200%;
     height: 200%;
     z-index: -1;
-}
-
-#video-bg-cover, #video-bg {
-	position: absolute;
-	left: 0; top: 0; right: 0; bottom: 0;
-	margin: auto;
-	min-height: 50%;
-	min-width: 50%;
-}
-
-#video-bg-cover {
-	background: -moz-radial-gradient(center, ellipse cover, rgba(0,0,0,0.75) 0%, rgba(0,0,0,1) 71%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
-	background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0,0.75) 0%,rgba(0,0,0,1) 71%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
-	background: radial-gradient(ellipse at center, rgba(0,0,0,0.75) 0%,rgba(0,0,0,1) 71%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
