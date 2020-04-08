@@ -16,33 +16,28 @@
 
 <body onload="page_load()">
     <header>
-        <div>
-            <h1><a href="javascript:set_iframe('/pages/front.html')">My OC Stuff</a></h1>
-        </div>
-        
-        <div>
-            <h3><em>A simple site for my creative endeavours.</em></h3>
-            <nav>
-                <li>
-                    <a href="javascript:set_iframe('/pages/front.html')">Front Page</a>
-                </li>
-                <li>
-                    |
-                </li>
-                <li>
-                    <a href="javascript:set_iframe('/pages/creatures.html')">Creatures</a>
-                </li>
-                <li>
-                    |
-                </li>
-                <li>
-                    <a href="javascript:set_iframe('/pages/characters.html')">Characters</a>
-                </li>
-            </nav>
-        </div>
-        
+        <h1><a href="javascript:set_iframe('/pages/front.html')">My OC Stuff</a></h1>
+        <h3><em>A simple site for my creative endeavours.</em></h3>
+
     </header>
     <div id="main-wrapper">
+        <nav>
+            <li>
+                <a href="javascript:set_iframe('/pages/front.html')">Front Page</a>
+            </li>
+            <li>
+                |
+            </li>
+            <li>
+                <a href="javascript:set_iframe('/pages/creatures.html')">Creatures</a>
+            </li>
+            <li>
+                |
+            </li>
+            <li>
+                <a href="javascript:set_iframe('/pages/characters.html')">Characters</a>
+            </li>
+        </nav>
         <iframe id="content" src="blank.html" scrolling="no" frameborder="0" onload="resizeIframe()"></iframe>
     </div>
 
