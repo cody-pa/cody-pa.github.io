@@ -2,11 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\css",
+    "\\fonts",
     "\\media",
     "\\pages",
-    "\\pages\\characters",
-    "\\scripts"
+    "\\pages\\characters"
   ],
-  "SelectedNode": "\\index.html",
+  "SelectedNode": "\\pages\\characters\\abitha.html",
   "PreviewInSolutionExplorer": false
 }
