@@ -1,23 +1,61 @@
-/*
-@font-face
-{
-    font-family: "Merriweather";
-    src: url("./fonts/Merriweather-Regular.otf") format("opentype");
+@font-face {
+    font-family: 'XoloniumBold';
+    src: url('../fonts/XoloniumBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
 }
-*/
+
+@font-face {
+    font-family: 'XoloniumRegular';
+    src: url('../fonts/XoloniumRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CousineBold';
+    src: url('../fonts/CousineBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CousineBoldItalic';
+    src: url('../fonts/CousineBoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'CousineItalic';
+    src: url('../fonts/CousineItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'CousineRegular';
+    src: url('../fonts/CousineRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    font-family: 'CousineRegular', Sans-Serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 100%;
+}
 body, div, html, header, footer, main
 {
     box-sizing: border-box;
-    font-family: 'CousineRegular';
-	font-weight: normal;
-	font-style: normal;
-	font-size: 1em;
+    
     color: white;
 }
 
 h1, h2, h3, h4, nav li
 {
-    font-family: 'XoloniumRegular';
+    font-family: 'XoloniumRegular', Sans-Serif;
     font-weight: 'bold';
 }
 

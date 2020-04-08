@@ -6,7 +6,7 @@ html {
     min-height: 100%;
     padding: 0;
     margin: 0;
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../media/sky-space-dark-galaxy.jpg");
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url("../media/sky-space-dark-galaxy.jpg");
     background-size: cover;
     background-position: center;
     background-color: black;
@@ -32,6 +32,11 @@ header
     text-align: center;
     width:100%;
 }
+
+header h1
+{
+    font-size: 4em;
+}
 nav
 {
     padding: 0;
@@ -53,8 +58,9 @@ nav li
     justify-content: center;
     flex-grow: 1;
     align-items: center;
+    min-width: min(max(60%, 50em), 100%);
     max-width: 100%;
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) );
+    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) );
     border-radius: 1em;
     margin: 1em;
 }
