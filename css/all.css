@@ -1,41 +1,41 @@
 @font-face {
     font-family: 'XoloniumBold';
-    src: url('../fonts/XoloniumBold.ttf') format('truetype');
+    src: url('/fonts/XoloniumBold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'XoloniumRegular';
-    src: url('../fonts/XoloniumRegular.ttf') format('truetype');
+    src: url('/fonts/XoloniumRegular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'CousineBold';
-    src: url('../fonts/CousineBold.ttf') format('truetype');
+    src: url('/fonts/CousineBold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'CousineBoldItalic';
-    src: url('../fonts/CousineBoldItalic.ttf') format('truetype');
+    src: url('/fonts/CousineBoldItalic.ttf') format('truetype');
     font-weight: bold;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'CousineItalic';
-    src: url('../fonts/CousineItalic.ttf') format('truetype');
+    src: url('/fonts/CousineItalic.ttf') format('truetype');
     font-weight: normal;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'CousineRegular';
-    src: url('../fonts/CousineRegular.ttf') format('truetype');
+    src: url('/fonts/CousineRegular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -45,11 +45,11 @@
     font-weight: normal;
     font-style: normal;
     font-size: 100%;
+
 }
 body, div, html, header, footer, main
 {
     box-sizing: border-box;
-    
     color: white;
 }
 
@@ -78,7 +78,6 @@ h1 a
 
 .lined
 {
-    width:100%;
     border-bottom: 0.15em solid white;
     display: inline-block;
 }

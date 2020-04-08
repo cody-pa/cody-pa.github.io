@@ -8,33 +8,42 @@
     <meta name="description" content="My OC site">
     <meta name="author" content="anonymous">
 
-    <link rel="stylesheet" href="./css/all.css">
-    <link rel="stylesheet" href="./css/main-page.css">
+    <link rel="stylesheet" href="/css/all.css">
+    <link rel="stylesheet" href="/css/main-page.css">
             
-    <script src="./scripts/main.js"></script>
-    <script src="./scripts/iframes.js"></script>
+    <script src="/scripts/main.js"></script>
 </head>
 
 <body onload="page_load()">
     <header>
-        <h1><a href="?page=./pages/front.html">My OC Stuff</a></h1>
-        <h3><em>A simple site for my creative endeavours.</em></h3>
-        <nav>
-            <li>
-                <a href="?page=./pages/front.html">Front Page</a>
-            </li>
-            <li>
-                |
-            </li>
-            <li>
-                <a href="?page=./pages/characters.html">Characters</a>
-            </li>
-        </nav>
+        <div>
+            <h1><a href="javascript:set_iframe('/pages/front.html')">My OC Stuff</a></h1>
+        </div>
+        
+        <div>
+            <h3><em>A simple site for my creative endeavours.</em></h3>
+            <nav>
+                <li>
+                    <a href="javascript:set_iframe('/pages/front.html')">Front Page</a>
+                </li>
+                <li>
+                    |
+                </li>
+                <li>
+                    <a href="javascript:set_iframe('/pages/creatures.html')">Creatures</a>
+                </li>
+                <li>
+                    |
+                </li>
+                <li>
+                    <a href="javascript:set_iframe('/pages/characters.html')">Characters</a>
+                </li>
+            </nav>
+        </div>
+        
     </header>
     <div id="main-wrapper">
-        <div id="main">
-            <iframe id="content" src="" "></iframe>
-        </div>
+        <iframe id="content" src="blank.html" scrolling="no" frameborder="0" onload="resizeIframe()"></iframe>
     </div>
 
     <footer>
