@@ -176,9 +176,6 @@ nav li
 #content
 {
     padding: 1em;
-    border: solid gray;
-    border-width: 0 1px;
-    border-radius: 1em;
     max-width: 100%;
     flex-grow: 1;
     /*width: 50em*/;
@@ -192,12 +189,20 @@ footer
     text-align: center;
 }
 
-#rev
-{
-    display: inline;
-    font-size: 80%;
-}
-
+#loader {
+    border: 0.25em solid #f3f3f3; /* Light grey */
+    border-top: 0.25em solid transparent; /* Blue */
+    border-radius: 50%;
+    width: 3em;
+    height: 3em;
+    animation: spin 0.5s linear infinite;
+    margin: 5em;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
 /**************** Class rules ****************/
 .lined
 {
@@ -209,4 +214,11 @@ footer
     background-image: linear-gradient(45deg, #808080 25%, transparent 25%), linear-gradient(-45deg, #808080 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #808080 75%), linear-gradient(-45deg, transparent 75%, #808080 75%);
     background-size: 3em 3em;
     background-position: 0 0, 0 1.5em, 1.5em -1.5em, -1.5em 0px;
+}
+
+.side-bordered
+{
+    border: solid gray;
+    border-width: 0 1px;
+    border-radius: 1em; 
 }
