@@ -88,7 +88,7 @@ nav li
     width: 100%;
     margin: 1em;
     padding: 1em 0;background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) );
-
+    max-width: 100%;
 }
 
 iframe
@@ -97,8 +97,16 @@ iframe
     border: solid gray;
     border-width: 0 1px;
     border-radius: 1em;
-    display: inline-block;
+    max-width: 100%;
+    flex-grow: 1;
+    text-align: center;
+    width: 50em;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
+
 footer
 {
     padding: 1em;

@@ -13,12 +13,12 @@ function getUrlParam(parameter, defaultvalue){
     return urlparameter;
 }
 
-
 function page_load() {
     var page = getUrlParam("page", "/pages/front.html");
     var request = new XMLHttpRequest();
     set_iframe(page);
 }
+
 
 function resizeIframe() {
     frame_obj = document.getElementById("content");
