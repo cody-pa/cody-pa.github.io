@@ -67,7 +67,6 @@ function readFile(file)
 function set_content(page_url, push = true)
 {
     var contentDiv = document.getElementById("content");
-    contentDiv.removeAttribute("class");
     /// Delete existing children
     while (contentDiv.childNodes.length > 0)
     {
@@ -112,5 +111,4 @@ async function wait_content(page_url, contentDiv, push = true) {
         window.history.pushState(page_url, "", "?page=" + page_url);
     }
 
-    contentDiv.setAttribute("class", "side-bordered");
 }

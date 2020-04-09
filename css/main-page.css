@@ -215,10 +215,3 @@ footer
     background-size: 3em 3em;
     background-position: 0 0, 0 1.5em, 1.5em -1.5em, -1.5em 0px;
 }
-
-.side-bordered
-{
-    border: solid gray;
-    border-width: 0 1px;
-    border-radius: 1em; 
-}
