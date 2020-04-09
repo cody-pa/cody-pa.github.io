@@ -46,7 +46,7 @@
     font-family: 'CousineRegular', Sans-Serif;
     font-weight: normal;
     font-style: normal;
-    font-size: 100%;
+    font-size: 90%;
 
 }
 *
@@ -67,12 +67,14 @@ html {
     background-color: black;
     background-attachment: fixed;
     color: white;
+    width: 100%;
+    min-width: 28em;
 
 }
 
 body
 {
-    margin: auto;
+    margin: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -92,13 +94,14 @@ h1, h2, h3, h4, nav li
 
 a
 {
-    color: #81A4CD;
+    color: #904aff;
     text-decoration: none;
 }
 
 a:hover
 {
-    text-decoration: underline;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 h1 a 
@@ -112,32 +115,30 @@ h1 a
 header
 {
     text-align: center;
-    width:100%;
+    width:56em;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-    padding: 2em;
-    padding-bottom: 1em;
+    padding-top: 1em;
+    margin-bottom: 1em;
     margin: 0;
 }
 
 header h1
 {
     font-size: 4em;
-    padding-bottom: 0;
-    margin-right: 0.5em;
-}
-header h1, h3
-{
-    margin-top: auto;
-    margin-bottom: 0;
 }
 
+header h1, h3 {
+    margin: 0;
+    padding: 0;
+}
 header h3
 {
-    padding-bottom: 0.75em;
-    margin-left: 0.5em;
+    margin-top: auto;
+    margin-bottom: 0.67em
 }
 header h1 a:hover {
     text-decoration: none;
@@ -145,18 +146,21 @@ header h1 a:hover {
 nav
 {
     padding: 0;
+    margin: 0;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 0;
-    border: none;
     list-style: none;
+    border: 1px solid;
+    border-color: transparent white;
 }
 nav li
 {
+    border: 1px solid;
+    border-color: transparent white;
+    text-align: center;
     padding: 1em;
     padding-top: 0;
-    padding-bottom: 2em;
 }
 
 /**************** Id rules ****************/
@@ -171,16 +175,24 @@ nav li
     margin: 1em;
     padding: 1em 0;background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) );
     max-width: 100%;
+    min-width: 100%;
 }
 
 #content
 {
-    padding: 1em;
+    
+    padding: 1em 2em;
     max-width: 100%;
-    flex-grow: 1;
-    /*width: 50em*/;
+    flex-grow: 0;
+    box-sizing: border-box;
+    border: 2px solid;
+    border-color: white transparent;
+    border-radius: 2em;
+    margin: 0;
+    min-width: 28em;
 }
 
+    
 footer
 {
     padding: 1em;
@@ -214,4 +226,10 @@ footer
     background-image: linear-gradient(45deg, #808080 25%, transparent 25%), linear-gradient(-45deg, #808080 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #808080 75%), linear-gradient(-45deg, transparent 75%, #808080 75%);
     background-size: 3em 3em;
     background-position: 0 0, 0 1.5em, 1.5em -1.5em, -1.5em 0px;
+}
+
+.vertical-bar
+{
+    border: 1px solid white;
+    padding: 1em 0;
 }
