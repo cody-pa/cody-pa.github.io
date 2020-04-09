@@ -1,3 +1,4 @@
+var parser = new DOMParser();
 function getUrlVars() {
     var vars = {};
     var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
@@ -16,30 +17,66 @@ function getUrlParam(parameter, defaultvalue){
 function page_load() {
     var page = getUrlParam("page", "/pages/front.html");
     var request = new XMLHttpRequest();
-    set_iframe(page);
+    set_content(page);
+    setFooter();
+
+    window.onpopstate = function(e)
+    {
+        if (e.state)
+        {
+            this.set_content(e.state, false);
+        }
+    }
+    
 }
 
-
-function resizeIframe() {
-    frame_obj = document.getElementById("content");
-    var frame_url = "/" + frame_obj.contentWindow.location.href.replace(/^(?:\/\/|[^/]+)*\//, '');
-
-    if (frame_url != "/blank.html") // when the page first loads the dummy src is put there
+function readFile(file)
+{
+    var rawFile = new XMLHttpRequest();
+    rawFile.open("GET", file, false);
+    var str = ""
+    rawFile.onreadystatechange = function ()
     {
-        frame_obj.style.height = frame_obj.contentWindow.document.documentElement.scrollHeight + 'px';
-        frame_obj.style.width = frame_obj.contentWindow.document.documentElement.scrollWidth + 'px';
-        window.history.replaceState({}, "Page Title", "/?page=" + frame_url);
-    };
+        str = rawFile.responseText;
+    }
+    rawFile.send(null)
+    return str;
+}
+function setFooter()
+{
+    var div_obj = document.getElementById("rev");
+    div_obj.textContent = "Site Revision: " + readFile("/.git/refs/heads/master");
 }
 
-function set_iframe(page_url) {
-    var fr = document.getElementById("content");
-    if (fr == null)
+function set_content(page_url, push = true) {
+    // Create parser
+    // get children of new document
+    var newChildren = parser.parseFromString(readFile(page_url), "text/html").getElementsByTagName("body")[0].getElementsByTagName("*");
+    var contentDiv = document.getElementById("content");
+    /// Delete existing children
+    while (contentDiv.childNodes.length > 0)
     {
-        location.href = page_url;
+        contentDiv.removeChild(contentDiv.childNodes[0]);
     }
-    else
+    // insert new children
+    while (newChildren.length > 0)
     {
-        fr.src = page_url;
+        contentDiv.appendChild(newChildren[0]);
     }
+
+    // fix clicks
+    links = contentDiv.getElementsByTagName("a");
+    for (index = 0; index < links.length; index++)
+    {
+        ele = links[index];
+        var link_ref = ele.getAttribute("href");
+        ele.setAttribute("href", "javascript:set_content('" + link_ref + "');");
+    }
+
+    if (push)
+    {
+        console.log("Trying to push state as " + page_url);
+        window.history.pushState(page_url, "", "?page=" + page_url);
+    }
+    
 }

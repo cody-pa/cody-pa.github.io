@@ -1,6 +1,6 @@
 ﻿<!doctype html>
 
-<html lang="en">
+<html lang="en" id="wrapper-page">
 <head>
     <meta charset="utf-8">
 
@@ -8,8 +8,7 @@
     <meta name="description" content="My OC site">
     <meta name="author" content="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <link rel="stylesheet" href="/css/all.css">
+
     <link rel="stylesheet" href="/css/main-page.css">
 
 
@@ -18,33 +17,34 @@
 
 <body onload="page_load()">
     <header>
-        <h1><a href="javascript:set_iframe('/pages/front.html')">My OC Stuff</a></h1>
+        <h1><a href="javascript:set_content('/pages/front.html')">My OC Stuff</a></h1>
         <h3><em>A simple site for my creative endeavours.</em></h3>
 
     </header>
     <div id="main-wrapper">
         <nav>
             <li>
-                <a href="javascript:set_iframe('/pages/front.html')">Front Page</a>
+                <a href="javascript:set_content('/pages/front.html')">Front Page</a>
             </li>
             <li>
                 |
             </li>
             <li>
-                <a href="javascript:set_iframe('/pages/creatures.html')">Creatures</a>
+                <a href="javascript:set_content('/pages/creatures.html')">Creatures</a>
             </li>
-            <li>
                 |
             </li>
             <li>
-                <a href="javascript:set_iframe('/pages/characters.html')">Characters</a>
+                <a href="javascript:set_content('/pages/characters.html')">Characters</a>
             </li>
         </nav>
-        <iframe id="content" src="blank.html" scrolling="no" frameborder="0" onload="resizeIframe()"></iframe>
+        <div id="content"></div>
+        
     </div>
 
     <footer>
         Copyright site owner.
+        <div id="rev"> empty </div>        
     </footer>
 </body>
 </html>

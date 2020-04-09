@@ -1,5 +1,60 @@
 /* This CSS will only appear in the main page. */
 
+@font-face {
+    font-family: 'XoloniumBold';
+    src: url('/fonts/XoloniumBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'XoloniumRegular';
+    src: url('/fonts/XoloniumRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CousineBold';
+    src: url('/fonts/CousineBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CousineBoldItalic';
+    src: url('/fonts/CousineBoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'CousineItalic';
+    src: url('/fonts/CousineItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'CousineRegular';
+    src: url('/fonts/CousineRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    font-family: 'CousineRegular', Sans-Serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 100%;
+
+}
+*
+{
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
 html {
     display: flex;
     flex-direction: column;
@@ -11,8 +66,10 @@ html {
     background-position: center;
     background-color: black;
     background-attachment: fixed;
-    scrollbar-color: purple;
+    color: white;
+
 }
+
 body
 {
     margin: auto;
@@ -26,10 +83,34 @@ body
     flex-grow: 1;
 }
 
+
+h1, h2, h3, h4, nav li
+{
+    font-family: 'XoloniumRegular', Sans-Serif;
+    font-weight: 'bold';
+}
+
+a
+{
+    color: #81A4CD;
+    text-decoration: none;
+}
+
+a:hover
+{
+    text-decoration: underline;
+}
+
+h1 a 
+{
+    color: white;
+    text-decoration: none;
+}
+
+
+
 header
 {
-    font-family: 'XoloniumRegular';
-    font-weight: 'bold';
     text-align: center;
     width:100%;
     display: flex;
@@ -78,6 +159,7 @@ nav li
     padding-bottom: 2em;
 }
 
+/**************** Id rules ****************/
 #main-wrapper {
     box-sizing: border-box;
     display: flex;
@@ -91,7 +173,7 @@ nav li
     max-width: 100%;
 }
 
-iframe
+#content
 {
     padding: 1em;
     border: solid gray;
@@ -99,15 +181,32 @@ iframe
     border-radius: 1em;
     max-width: 100%;
     flex-grow: 1;
-    text-align: center;
-    width: 50em;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    /*width: 50em*/;
 }
 
 footer
 {
     padding: 1em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#rev
+{
+    display: inline;
+    font-size: 80%;
+}
+
+/**************** Class rules ****************/
+.lined
+{
+    border-bottom: 0.15em solid white;
+    display: inline-block;
+}
+.checkered
+{
+    background-image: linear-gradient(45deg, #808080 25%, transparent 25%), linear-gradient(-45deg, #808080 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #808080 75%), linear-gradient(-45deg, transparent 75%, #808080 75%);
+    background-size: 3em 3em;
+    background-position: 0 0, 0 1.5em, 1.5em -1.5em, -1.5em 0px;
 }
