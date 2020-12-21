@@ -68,8 +68,6 @@ html {
     background-attachment: fixed;
     color: white;
     width: 100%;
-    min-width: 28em;
-
 }
 
 body
@@ -83,6 +81,7 @@ body
     width: 100%;
     align-items: center;
     flex-grow: 1;
+    max-width: 100%;
 }
 
 
@@ -116,6 +115,7 @@ header
 {
     text-align: center;
     width:56em;
+    max-width: 80%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -128,7 +128,8 @@ header
 
 header h1
 {
-    font-size: 4em;
+    display: block;
+    font-size: max(min(4em, 10vw), 2em);
 }
 
 header h1, h3 {
@@ -172,24 +173,22 @@ nav li
     align-items: center;
     flex-grow: 1;
     width: 100%;
-    margin: 1em;
+    margin: 1em 0;
     padding: 1em 0;background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) );
-    max-width: 100%;
-    min-width: 100%;
+    min-width: min(100%, 28em);
 }
 
 #content
 {
-    
     padding: 1em 2em;
-    max-width: 100%;
+    width: 100%;
+    max-width: 50em;
     flex-grow: 0;
     box-sizing: border-box;
     border: 2px solid;
     border-color: white transparent;
     border-radius: 2em;
     margin: 0;
-    min-width: 28em;
 }
 
     
