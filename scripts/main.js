@@ -112,3 +112,9 @@ async function wait_content(page_url, contentDiv, push = true) {
     }
 
 }
+
+function openCollapsible(thing)
+{
+	var b = thing.nextElementSibling;
+	b.hidden = !b.hidden;
+};

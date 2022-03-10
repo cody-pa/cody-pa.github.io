@@ -61,7 +61,6 @@ html {
     min-height: 100%;
     padding: 0;
     margin: 0;
-    background: url("../media/site-bg.jpg");
     background-size: cover;
     background-position: center;
     background-color: black;
@@ -82,6 +81,10 @@ body
     align-items: center;
     flex-grow: 1;
     max-width: 100%;
+	background-image: url("/media/site-bg.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 
 
@@ -164,6 +167,7 @@ nav li
     padding-top: 0;
 }
 
+
 /**************** Id rules ****************/
 #main-wrapper {
     box-sizing: border-box;
@@ -174,7 +178,8 @@ nav li
     flex-grow: 1;
     width: 100%;
     margin: 1em 0;
-    padding: 1em 0;background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) );
+    padding: 1em 0;
+	background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) );
     min-width: min(100%, 28em);
 }
 
@@ -182,7 +187,7 @@ nav li
 {
     padding: 1em 2em;
     width: 100%;
-    max-width: 50em;
+    max-width: 60em;
     flex-grow: 0;
     box-sizing: border-box;
     border: 2px solid;
@@ -231,4 +236,10 @@ footer
 {
     border: 1px solid white;
     padding: 1em 0;
+}
+
+.collapsible
+{
+	cursor: pointer;
+	text-decoration: underline;
 }
