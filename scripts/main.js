@@ -115,13 +115,13 @@ async function wait_content(page_url, contentDiv, push = true) {
 
 function openCollapsible(thing)
 {
-	if (thing.textContent.charAt(0) == '⯈')
+	if (thing.textContent.charAt(0) == '▲')
 	{
-		thing.textContent = thing.textContent.replace('⯈', '▼');
+		thing.textContent = thing.textContent.replace('▲', '▼');
 	}
 	else
 	{
-		thing.textContent = thing.textContent.replace('▼', '⯈');
+		thing.textContent = thing.textContent.replace('▼', '▲');
 	}
 	var b = thing.nextElementSibling;
 	b.hidden = !b.hidden;
