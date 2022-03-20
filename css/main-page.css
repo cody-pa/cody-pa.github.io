@@ -149,6 +149,7 @@ li
 table
 {
 	font-family: 'Share Tech Mono', monospace;
+	margin: auto;
 }
 
 td
@@ -161,10 +162,13 @@ td:first-child {
 	margin-right: 1em;
 }
 
-b
+img
 {
-	font-family: inherit;
+	width: 20em;
+	max-width: 100%;
+	border-radius: 0.5em;
 }
+
 /**************** Id rules ****************/
 #main-wrapper {
     box-sizing: border-box;
@@ -247,14 +251,8 @@ footer
 	border-radius: 1em;
 	padding: 1em;
 	margin: 0.5em 0;
-	background: rgba(0, 0, 0, 0.5);
-}
-
-.profile-info
-{
-	display: flex;
-	flex-direction: row;
-	gap: 1em;
+	background: rgba(0, 0, 0, 0.75);
+	overflow: hidden;
 }
 
 [hidden]{
@@ -263,5 +261,33 @@ footer
 
 .glossy
 {
-	backdrop-filter: blur(6px);
+	background-color: rgba(0,0,0,0.5);
+}
+
+@supports ( backdrop-filter: blur(6px) ) {
+    .glossy
+	{
+		backdrop-filter: blur(6px);
+		background-color: rgba(0,0,0,0);
+	}
+}
+
+.profile-info
+{
+	text-align: center;
+}
+
+.table-wrapper
+{
+	border-bottom: 1px solid white;
+	display: block;
+	width: 100%;
+}
+
+@media screen and (min-width: 50em)
+{
+	.profile-info{
+		float: left;
+		margin-right: 1em;
+	}
 }
