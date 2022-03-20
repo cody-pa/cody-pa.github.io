@@ -175,11 +175,12 @@ table
 td
 {
 	text-align: right;
+	padding-left: 1em;
 }
 
 td:first-child {
 	text-align: left;
-	margin-right: 1em;
+	padding-right: 1em;
 }
 
 img
