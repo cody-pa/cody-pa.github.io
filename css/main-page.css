@@ -129,6 +129,7 @@ nav
     list-style: none;
 	border-radius: 1em 1em 0 0;
     border-bottom: 0;
+	max-width: 100%;
 }
 
 nav li
@@ -136,6 +137,7 @@ nav li
     text-align: center;
 	padding: 0;
 	margin: 0;
+	max-width: 33%;
 }
 
 nav li a
